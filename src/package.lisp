@@ -1,5 +1,3 @@
-;;;; package.lisp
-
-(defpackage #:qeng-ho
-  (:use #:cl))
+(restas:define-module :qeng-ho
+    (:use :cl))
 

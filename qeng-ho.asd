@@ -5,7 +5,7 @@
   :license "BSD"
   :author "Brit Butler <redline6561@gmail.com>"
   :pathname "src/"
-  :depends-on (#:hunchentoot #:st-json #:cl-6502)
+  :depends-on (#:restas #:st-json #:cl-6502)
   :serial t
   :components ((:file "package")
                (:file "qeng-ho"))
