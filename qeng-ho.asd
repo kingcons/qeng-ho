@@ -8,6 +8,7 @@
   :depends-on (#:restas #:st-json #:cl-6502)
   :serial t
   :components ((:file "package")
+               (:file "6502")
                (:file "qeng-ho"))
   :in-order-to ((test-op (load-op qeng-ho-tests)))
   :perform (test-op :after (op c)
