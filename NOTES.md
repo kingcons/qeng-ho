@@ -1,13 +1,13 @@
 # On Qeng-Ho:
 * We really want 6502/init/ and 6502/exit/ routes. Just to get a session going. API key or session ID should somehow be involved.
-** Init takes an API key and returns a session key or cookie, new cpu+ram. Exit takes an API key and (maybe) session key.
-** Hunchentoot will spawn a thread per session, any non init or exit methods should execute in that thread.
-*** Wrap non init/exit API calls with timeouts/deadlines for safety. Plz don't DDoS my shit guys!
-*** For now, use sbcl's wait-for and with-timeout. Generalize to trivial-timeout or bordeaux-threads/Madeira later.
-** Hunchentoot also allows us to tweak session expiry times with ```*session-max-time*```. Hooray!
+  * Init takes an API key and returns a session key or cookie, new cpu+ram. Exit takes an API key and (maybe) session key.
+  * Hunchentoot will spawn a thread per session, any non init or exit methods should execute in that thread.
+    * Wrap non init/exit API calls with timeouts/deadlines for safety. Plz don't DDoS my shit guys!
+      * For now, use sbcl's wait-for and with-timeout. Generalize to trivial-timeout or bordeaux-threads/Madeira later.
+* Hunchentoot also allows us to tweak session expiry times with ```*session-max-time*```. Hooray!
 
 * ST-JSON will be fine. Need to define write-json-element for CPU class and RAM.
-** Probably best to convert to JSOs and let st-json take it from there.
+  * Probably best to convert to JSOs and let st-json take it from there.
 
 # On Pham-Nuwen:
 * The eventual goal of this project is to enable running Nintendo games in the browser with nifty visualizations and the ability to stop the emulator, step instructions, disassemble, peek and poke, and generally see a bit about how the games work.
